@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:latest
-      - image: circleci/postgres:9.6-alpine
+      - image: circleci/postgres:latest-ram
         environment:
           POSTGRES_USER: testuser
           POSTGRES_DB: test
