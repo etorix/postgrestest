@@ -8,7 +8,7 @@ jobs:
           POSTGRES_USER: testuser
           POSTGRES_DB: test
           POSTGRES_PASSWORD: testpassword
-        command: -c max_connections=300
+        command: -c max_connections 300
     steps:
       - run:
          name: test
