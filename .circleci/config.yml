@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:latest
+      - image: circleci/postgres:9.6-alpine
+        environment:
+          POSTGRES_USER: testuser
+          POSTGRES_DB: test
+          POSTGRES_PASSWORD: testpassword
+        command: [--max_connections 500]
+    steps:
+      - run:
+         name: test
+         command:  echo test
