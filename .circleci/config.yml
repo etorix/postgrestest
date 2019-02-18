@@ -8,4 +8,4 @@ jobs:
     steps:
       - run:
          name: test
-         command:  echo test
+         command:  sleep 10
