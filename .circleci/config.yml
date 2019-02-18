@@ -3,12 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:latest
-      - image: circleci/postgres:latest-ram
-        environment:
-          POSTGRES_USER: testuser
-          POSTGRES_DB: test
-          POSTGRES_PASSWORD: testpassword
-        command: -c max_connections 300
+      - image: circleci/mongo
+        command: --port 5000
     steps:
       - run:
          name: test
